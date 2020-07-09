@@ -1,0 +1,33 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Designing a Card",
+            "size": "medium",
+            "weight": "bolder"
+        },
+        {
+            "type": "Image",
+            "altText": "",
+            "url": "{imageHostingUrl}/designing-a-card.png"
+        },
+        {
+            "type": "TextBlock",
+            "text": "When designing a card, all of the data is sent in the body of the `AdaptiveCard` JSON object. The data includes the following:",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "- **Elements** such as `TextBlock`, `RichTextBlock`, and `Image` are used to present content in card.\n\n- **Container Objects** such as `ActionSet`, `ColumnSet`, `Container`, `FactSet`, and `ImageSet` are used to group elements together to optimze the UI/UX Design of the card.\n\n- **Inputs** are used to display form fields in the card, so that user can consume and submit their own information. Inputs include `Text`, `Date`, `Toggle`, and `ChoiceSet`.",
+            "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "Webex For Developers provides a [Buttons and Cards Designer](http://developer.webex.com/buttons-and-cards-designer) that allows you to visually build a card and then copy the JSON to your application. We'll take a look into that in the next lesson.",
+          "wrap": true
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

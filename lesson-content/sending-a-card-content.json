@@ -1,0 +1,84 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Sending A Card to Webex Teams",
+      "size": "medium",
+      "weight": "bolder"
+    },
+    {
+      "type": "TextBlock",
+      "text": "To generate a Card in Webex Teams, you'll need to include the card's JSON in a POST request to the [Webex /messages API](https://developer.webex.com/docs/api/v1/messages/create-a-message). ",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "A message request to send a card looks very much like a \"regular\" message request, except that the request body will include an `attachments` attribute which includes data that tells Webex how to render a card.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "The `attachments` field is an array that will include a single object made up of two fields:\n\n* `contentType`: always set to \"application/vnd.microsoft.card.adaptive\"\n\n* `content`: this is your card's design JSON, possibly copied from the designer",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "When sending the card data, the Webex message object must also include either a `text` or `markdown` field for use by clients that cannot render cards. This text should convey information about the card's content and provide an alternative method to interact with the card's actions.\n",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Click the button below to see a simple example of a message request body with an attachments field.\n",
+      "wrap": true
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "ActionSet",
+          "horizontalAlignment": "Center",
+          "actions": [
+            {
+              "type": "Action.ShowCard",
+              "title": "Show sample Send Card request",
+              "card": {
+                "type": "AdaptiveCard",
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "version": "1.2",
+                "body": [
+                  {
+                    "type": "Container",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "```json\n{\n  \"roomId\": \"{{roomId}}\",\n  \"text\": \"This is the text a user will see if the card cannot be rendered.\",\n  \"attachments\": [\n    {\n      \"contentType\": \"application/vnd.microsoft.card.adaptive\",\n        \"content\": {\n          \"type\": \"AdaptiveCard\",\n          \"version\": \"1.0\",\n          \"body\": [\n            {\n              \"type\": \"TextBlock\",\n              \"text\": \"Here is a logo\"\n            },\n            {\n              \"type\": \"Image\",\n              \"url\": \"https://www.ccsmedia.com/media/WebexTeams_Logo-150x150.png\",\n              \"size\": \"small\"\n            }\n         ]\n       }\n    }\n  ]\n}",
+                        "wrap": true
+                      },
+                      {
+                        "type": "ActionSet",
+                        "horizontalAlignment": "center",
+                        "actions": [
+                          {
+                            "type": "Action.Submit",
+                            "id": "postMessageButton",
+                            "title": "Try Posting This Message...",
+                            "data": {
+                              "customPostMessage": true
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

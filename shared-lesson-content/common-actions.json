@@ -1,0 +1,82 @@
+[
+  {
+    "type": "Action.ShowCard",
+    "title": "Pick Another Lesson",
+    "card": {
+      "type": "AdaptiveCard",
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "body": [
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Available Lessons:"
+            },
+            {
+              "type": "Input.ChoiceSet",
+              "id": "jumpToLessonIndex",
+              "value": "{nextLessonIndex}",
+              "choices": []
+            },
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Go To Lesson!",
+                  "id": "gotoLesson",
+                  "data": {
+                    "nextLesson": false,
+                    "pickAnotherLesson": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "Action.ShowCard",
+    "title": "Helpful Resources",
+    "card": {
+      "type": "AdaptiveCard",
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "body": [
+        {
+          "type": "TextBlock",
+          "text": "* [Join the 'Ask B&C School' Webex Teams Space](https://eurl.io/#SJiS9VKTH)\n* [View the Source for This Card]({cardSourceUrl})\n* [View the Source for This App]({appSourceUrl})\n* [Official Developer Guide](https://developer.webex.com/docs/api/guides/cards)\n* [Buttons and Cards Designer](https://developer.webex.com/buttons-and-cards-designer)\n* [Adaptive Card Schema Explorer](https://adaptivecards.io/explorer/)\n* [Cisco DevNet: Card Sample App](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/webex-card-sample/) ",
+          "wrap": true
+        },
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Do you have questions, comments or suggestions?\n\nWe'd love to get your feedback on this bot or any aspect of the Webex Teams Buttons and Cards feature.",
+              "wrap": true
+            },
+            {
+              "type": "Input.Text",
+              "id": "feedback",
+              "isMultiline": true,
+              "placeholder": "Enter your feedback"
+            },
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Send Feedback",
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

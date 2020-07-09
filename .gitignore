@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+.DS_Store
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Config
+.env*
+config.json
+mongo.json
+config-prodbot.json
+mongo-prodbot.json
+ 
+# Debug configs
+.vscode/launch.json
+
+# Deployment scripts
+publish-to-aws.sh
+shutdown-aws.sh
+start-one-aws-instance.sh
+
+# Generated cards hosted in B&C Designer
+*.zip
+publish-existing-docker-to-aws.sh
+restart-aws.sh

@@ -1,0 +1,53 @@
+[
+  {
+    "contentFile": "welcome-content.json"
+  },
+  {
+    "contentFile": "what-is-a-card.json"
+  },
+  {
+    "contentFile": "advantages.json"
+  },
+  {
+    "contentFile": "adaptive-cards.json"
+  },
+  {
+    "contentFile": "designing-a-card.json"
+  },
+  {
+    "contentFile": "webex-card-designer.json"
+  },
+  {
+    "contentFile": "sending-a-card-content.json",
+    "customHandlerFile": "sending-a-card-handler"
+  },
+  {
+    "contentFile": "how-this-app-sends-cards.json"
+  },
+  {
+    "contentFile": "displaying-dynamic-content.json",
+    "customHandlerFile": "displaying-dynamic-content-handler"
+  },
+  {
+    "contentFile": "buttons.json"
+  },
+  {
+    "contentFile": "registering-for-events.json"
+  },
+  {
+    "contentFile": "processing-button-events.json"
+  },
+  {
+    "contentFile": "how-this-app-handles-events.json"
+  },
+  {
+    "contentFile": "form-demo.json"
+  },
+  {
+    "contentFile": "guidelines-bestpractices.json"
+  },
+  {
+    "contentFile": "graduate.json",
+    "customHandlerFile": "graduation-handlers"
+  }
+]

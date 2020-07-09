@@ -1,0 +1,34 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Lesson 14: Guidelines & Best Practices",
+        "size": "medium",
+        "weight": "bolder"
+      },
+      {
+        "type": "Image",
+        "altText": "Person helping another person",
+        "url": "{imageHostingUrl}/guidelines-bestpractices.jpg",
+        "horizontalAlignment": "Center"
+      },
+      {
+        "type": "TextBlock",
+        "text": "General:\n* Webex Teams supports Adaptive Cards 1.2.\n* All card elements are available for use except `Media`.\n* The following card properties are not supported yet: `Action.ToggleVisibility` for \"Action\" and \"ActionSet\" elements, `height` for \"ColumnSet\", and the card level attributes: `fallbackText`, `fallback`, `requires`, `speak`, and `verticalContentAlignment`.\n* Cards may include up to five actions.\n* Messages with Cards may include up to 10 images.\n* Only one card can be sent per request.\n* The card’s content cannot be changed after it’s created.\n* You can use the [Buttons and Cards Designer](https://developer.webex.com/buttons-and-cards-designer) to design your Cards.",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "After a button click:\n* Since the content of a Card cannot be changed after it's created, you could instead remove the card and post a message with the result of the action. To remove a card, simply delete the message that contains the card attachment. The card will be removed from the space.\n* In cases where deleting the card is not feasible, such as in a group space where you want multiple people to interact with the Card, you could send each user a 1:1 message after they've interacted with it, or post a reply telling users that you already have their input for this card.",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "As always, engage your company's data protection team to understand if any of the data you're bot will be collecting triggers applicable regulatory or compliance requirements.",
+        "wrap": true
+      }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
